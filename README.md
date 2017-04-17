@@ -1,5 +1,7 @@
 # MqlClock
 
+[![Platform](https://img.shields.io/badge/platform-iOS%208.0%2B-blue.svg?style=flat)](http://cocoadocs.org/docsets/FSCalendar)
+
 ## Description
 
 ![](http://o9rpnyegw.bkt.clouddn.com/MqlClock.gif)
