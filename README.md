@@ -2,9 +2,10 @@
 
 ## Description
 
-<iframe height=363 width=260 src="https://github.com/MQL9011/MqlClock/blob/master/MqlClock.gif">
+![](http://o9rpnyegw.bkt.clouddn.com/MqlClock.gif)
 
 ## How to Use
+
 
 
 # License
