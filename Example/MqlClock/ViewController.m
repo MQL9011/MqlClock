@@ -20,6 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view addSubview:self.timeLable];
+
     MqlClock *mc = [MqlClock sharedMqlClock];
     
     mc.dateFormat = @"yyyy-MM-dd HH:mm:ss";
