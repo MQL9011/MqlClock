@@ -7,7 +7,7 @@
 
 一句代码显示时间
 
-![](http://o9rpnyegw.bkt.clouddn.com/DJS.gif)
+![](http://o9rpnyegw.bkt.clouddn.com/QDJS.gif)
 
 ## Install
 The podfile   
