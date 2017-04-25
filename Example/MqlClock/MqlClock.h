@@ -37,6 +37,7 @@
 + (instancetype)sharedMqlClock;
 
 
+
 /**
  show the now time;
  */
@@ -54,4 +55,21 @@
  set the countDown start Second
  */
 - (void)setTheCountDownWithSecond:(NSUInteger)startSecond;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @end
