@@ -302,7 +302,7 @@
 				DEVELOPMENT_TEAM = S2M9W9G946;
 				INFOPLIST_FILE = MqlClock/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = us.leqi.MqlClock;
+				PRODUCT_BUNDLE_IDENTIFIER = us.MQL.MqlClock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -314,7 +314,7 @@
 				DEVELOPMENT_TEAM = S2M9W9G946;
 				INFOPLIST_FILE = MqlClock/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = us.leqi.MqlClock;
+				PRODUCT_BUNDLE_IDENTIFIER = us.MQL.MqlClock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

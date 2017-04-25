@@ -3,7 +3,7 @@
 //  MqlClock
 //
 //  Created by MBP on 2017/4/17.
-//  Copyright © 2017年 leqi. All rights reserved.
+//  Copyright © 2017年 MQL. All rights reserved.
 //
 
 #import "MqlClock.h"
