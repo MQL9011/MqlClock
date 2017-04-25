@@ -7,16 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		102AA4551EAF3BA000351DC1 /* MqlClock.m in Sources */ = {isa = PBXBuildFile; fileRef = 102AA4521EAF3BA000351DC1 /* MqlClock.m */; };
+		102AA4561EAF3BA000351DC1 /* UITableViewCell+MqlClock.m in Sources */ = {isa = PBXBuildFile; fileRef = 102AA4541EAF3BA000351DC1 /* UITableViewCell+MqlClock.m */; };
+		102AA4591EAF3BBC00351DC1 /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 102AA4581EAF3BBC00351DC1 /* CustomTableViewCell.m */; };
 		10C87E1B1EA48A900088D5FA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 10C87E1A1EA48A900088D5FA /* main.m */; };
 		10C87E1E1EA48A900088D5FA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 10C87E1D1EA48A900088D5FA /* AppDelegate.m */; };
 		10C87E211EA48A900088D5FA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10C87E201EA48A900088D5FA /* ViewController.m */; };
 		10C87E241EA48A900088D5FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10C87E221EA48A900088D5FA /* Main.storyboard */; };
 		10C87E261EA48A900088D5FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10C87E251EA48A900088D5FA /* Assets.xcassets */; };
 		10C87E291EA48A900088D5FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10C87E271EA48A900088D5FA /* LaunchScreen.storyboard */; };
-		10C87E351EA4970C0088D5FA /* MqlClock.m in Sources */ = {isa = PBXBuildFile; fileRef = 10C87E341EA4970C0088D5FA /* MqlClock.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		102AA4511EAF3BA000351DC1 /* MqlClock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MqlClock.h; sourceTree = "<group>"; };
+		102AA4521EAF3BA000351DC1 /* MqlClock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MqlClock.m; sourceTree = "<group>"; };
+		102AA4531EAF3BA000351DC1 /* UITableViewCell+MqlClock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+MqlClock.h"; sourceTree = "<group>"; };
+		102AA4541EAF3BA000351DC1 /* UITableViewCell+MqlClock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+MqlClock.m"; sourceTree = "<group>"; };
+		102AA4571EAF3BBC00351DC1 /* CustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableViewCell.h; sourceTree = "<group>"; };
+		102AA4581EAF3BBC00351DC1 /* CustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewCell.m; sourceTree = "<group>"; };
 		10C87E161EA48A900088D5FA /* MqlClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MqlClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10C87E1A1EA48A900088D5FA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		10C87E1C1EA48A900088D5FA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -27,8 +35,6 @@
 		10C87E251EA48A900088D5FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		10C87E281EA48A900088D5FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		10C87E2A1EA48A900088D5FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		10C87E331EA4970C0088D5FA /* MqlClock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MqlClock.h; sourceTree = "<group>"; };
-		10C87E341EA4970C0088D5FA /* MqlClock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MqlClock.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +48,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		102AA4501EAF3BA000351DC1 /* CoreMql */ = {
+			isa = PBXGroup;
+			children = (
+				102AA4511EAF3BA000351DC1 /* MqlClock.h */,
+				102AA4521EAF3BA000351DC1 /* MqlClock.m */,
+				102AA4531EAF3BA000351DC1 /* UITableViewCell+MqlClock.h */,
+				102AA4541EAF3BA000351DC1 /* UITableViewCell+MqlClock.m */,
+			);
+			path = CoreMql;
+			sourceTree = "<group>";
+		};
 		10C87E0D1EA48A900088D5FA = {
 			isa = PBXGroup;
 			children = (
@@ -61,12 +78,13 @@
 		10C87E181EA48A900088D5FA /* MqlClock */ = {
 			isa = PBXGroup;
 			children = (
+				102AA4501EAF3BA000351DC1 /* CoreMql */,
 				10C87E1C1EA48A900088D5FA /* AppDelegate.h */,
 				10C87E1D1EA48A900088D5FA /* AppDelegate.m */,
-				10C87E331EA4970C0088D5FA /* MqlClock.h */,
-				10C87E341EA4970C0088D5FA /* MqlClock.m */,
 				10C87E1F1EA48A900088D5FA /* ViewController.h */,
 				10C87E201EA48A900088D5FA /* ViewController.m */,
+				102AA4571EAF3BBC00351DC1 /* CustomTableViewCell.h */,
+				102AA4581EAF3BBC00351DC1 /* CustomTableViewCell.m */,
 				10C87E221EA48A900088D5FA /* Main.storyboard */,
 				10C87E251EA48A900088D5FA /* Assets.xcassets */,
 				10C87E271EA48A900088D5FA /* LaunchScreen.storyboard */,
@@ -156,10 +174,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				102AA4561EAF3BA000351DC1 /* UITableViewCell+MqlClock.m in Sources */,
 				10C87E211EA48A900088D5FA /* ViewController.m in Sources */,
+				102AA4591EAF3BBC00351DC1 /* CustomTableViewCell.m in Sources */,
 				10C87E1E1EA48A900088D5FA /* AppDelegate.m in Sources */,
-				10C87E351EA4970C0088D5FA /* MqlClock.m in Sources */,
 				10C87E1B1EA48A900088D5FA /* main.m in Sources */,
+				102AA4551EAF3BA000351DC1 /* MqlClock.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,6 +338,7 @@
 				10C87E2F1EA48A900088D5FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
