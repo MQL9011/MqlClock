@@ -8,22 +8,47 @@
 
 #import <Foundation/Foundation.h>
 
+@protocol MqlClockDelegate <NSObject>
+
+@optional
+
+
+/**
+ show the countDown Time
+ */
+- (void)countDown:(NSString *)cdTimer;
+
+/**
+ show the time "2017-03-01 09:23:50"
+ */
+- (void)showTheTimeNow:(NSString *)nowTime;
+
+@end
+
 @interface MqlClock : NSObject
+
+@property(nonatomic,weak) id<MqlClockDelegate>delegate;
+
 
 //You can set the dataFormat default is yyyy-MM-dd HH:mm:ss
 @property(nonatomic,copy) NSString *dateFormat;
 
 
-@property(nonatomic,copy) void(^nowTimeBlock)(NSString *nowTime);
 
 
 + (instancetype)sharedMqlClock;
 
 
 /**
- *  get The Weekday 「星期一,二,三。。。」
+ *  get The Weekday CN
  *
  *  @param inputDate yyyy-MM-dd
  */
 - (NSString*)weekdayStringFromDate:(NSDate *)inputDate;
+
+
+/**
+ show the countDown
+ */
+- (void)setTheCountDownWithSecond:(NSUInteger)startSecond;
 @end

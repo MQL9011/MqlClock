@@ -9,9 +9,14 @@
 #import "ViewController.h"
 #import "MqlClock.h"
 
-@interface ViewController ()
+@interface ViewController ()<MqlClockDelegate>
+
+@property(nonatomic,strong) MqlClock *mc;
 
 @property(nonatomic,strong) UILabel *timeLable;
+
+@property(nonatomic,strong) UIButton *countDownBtn;
+
 
 @end
 
@@ -19,15 +24,33 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setUpUI];
+
+    self.mc = [MqlClock sharedMqlClock];
+    self.mc.delegate = self;
+    self.mc.dateFormat = @"yyyy-MM-dd HH:mm:ss";
+
+}
+
+
+#pragma mark MqlClockDelegate
+
+- (void)showTheTimeNow:(NSString *)nowTime{
+    self.timeLable.text = nowTime;
+
+}
+
+- (void)countDown:(NSString *)cdTimer{
+    [self.countDownBtn setTitle:[NSString stringWithFormat:@"倒计时%@",cdTimer] forState:UIControlStateNormal];
+}
+
+- (void)startCountDownTime{
+    [self.mc setTheCountDownWithSecond:20];
+}
+
+- (void)setUpUI{
     [self.view addSubview:self.timeLable];
-
-    MqlClock *mc = [MqlClock sharedMqlClock];
-    
-    mc.dateFormat = @"yyyy-MM-dd HH:mm:ss";
-
-    mc.nowTimeBlock = ^(NSString *nowTime) {
-        self.timeLable.text = nowTime;
-    };
+    [self.view addSubview:self.countDownBtn];
 }
 
 
@@ -41,4 +64,14 @@
     return _timeLable;
 }
 
+- (UIButton *)countDownBtn{
+    if (_countDownBtn == nil) {
+        _countDownBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 200, [UIScreen mainScreen].bounds.size.width, 50)];
+        _countDownBtn.backgroundColor = [UIColor blackColor];
+        [_countDownBtn setTitle:@"点我开始倒计时" forState:UIControlStateNormal];
+        [_countDownBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [_countDownBtn addTarget:self action:@selector(startCountDownTime) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _countDownBtn;
+}
 @end
