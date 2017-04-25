@@ -7,7 +7,7 @@
 
 一句代码显示时间
 
-![](http://o9rpnyegw.bkt.clouddn.com/MqlClockImg.gif)
+![](http://o9rpnyegw.bkt.clouddn.com/MgKr6pkx4o.gif)
 
 ## Install
 The podfile   
