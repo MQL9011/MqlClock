@@ -36,12 +36,6 @@ pod install
 
 ```
 
->delegate   
-
-```
-@interface ViewController ()<MqlClockDelegate>
-
-```
 
 >Init The clock  
 
@@ -52,6 +46,12 @@ pod install
 
 ```
 
+>delegate   
+
+```
+@interface ViewController ()<MqlClockDelegate>
+
+```
 
 >2017-04-25 10:45:57 星期二  
 
