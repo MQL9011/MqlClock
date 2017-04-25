@@ -3,14 +3,27 @@
 //  MqlClock
 //
 //  Created by MBP on 2017/4/17.
-//  Copyright © 2017年 MaQianli. All rights reserved.
+//  Copyright © 2017年 leqi. All rights reserved.
 //
 
 #import "MqlClock.h"
 
+@interface MqlClock ()
+
+@property(nonatomic,copy) NSDate *startDate;
+
+@property(nonatomic,assign) NSUInteger totalSecond;
+
+@property(nonatomic,copy) NSTimer *countDownTimer;
+
+@property(nonatomic,copy) NSString *cdTime;
+
+
+@end
+
+
 
 @implementation MqlClock
-
 static MqlClock *instance = nil;
 
 /**
@@ -49,7 +62,7 @@ static MqlClock *instance = nil;
         NSString *dateString = [timeFormat stringFromDate:nowDate];
         NSString *weekDay = [self weekdayStringFromDate:nowDate];
         NSString *showStr = [NSString stringWithFormat:@"%@ %@",dateString,weekDay];
-        self.nowTimeBlock(showStr);
+        [self.delegate showTheTimeNow:showStr];
     }];
 }
 
@@ -68,5 +81,66 @@ static MqlClock *instance = nil;
     NSDateComponents *theComponents = [calendar components:calendarUnit fromDate:inputDate];
     return [weekdays objectAtIndex:theComponents.weekday];
 }
+
+
+/**
+ 显示倒计时
+ @param startSecond 从多少秒开始倒计时
+ */
+- (void)setTheCountDownWithSecond:(NSUInteger)startSecond{
+    if (_totalSecond == 0) {
+        _totalSecond = startSecond;
+        _countDownTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(timerStart:) userInfo:nil repeats:YES];
+        _startDate = [NSDate date];
+        [[NSRunLoop currentRunLoop]addTimer:_countDownTimer forMode:NSRunLoopCommonModes];
+    }
+}
+
+-(void)timerStart:(NSTimer *)theTimer{
+    double nowSecond = [[NSDate date] timeIntervalSinceDate:_startDate];
+    NSUInteger sec = _totalSecond - (nowSecond + 0.1);
+//    NSLog(@"=====%f======%lu",nowSecond,(unsigned long)sec);
+    _cdTime = [NSString stringWithFormat:@"%lu",(unsigned long)sec];
+    [self.delegate countDown:_cdTime];
+    if (sec <= 0) {
+        [_countDownTimer invalidate];
+    }
+}
+
+#pragma mark delegate
+- (void)countDown:(NSString *)cdTimer{
+
+}
+
+
+
+- (void)showTheTimeNow:(NSString *)nowTime{
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @end

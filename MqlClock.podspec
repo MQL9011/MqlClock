@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "MqlClock"
-  s.version      = "1.1"
+  s.version      = "1.1.1"
   s.summary      = "一行代码显示实时时间."
   s.description  = "点击按钮倒计时"
   s.homepage     = "https://github.com/MQL9011/MqlClock"
