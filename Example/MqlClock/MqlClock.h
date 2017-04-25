@@ -11,8 +11,6 @@
 @protocol MqlClockDelegate <NSObject>
 
 @optional
-
-
 /**
  show the countDown Time
  */
@@ -38,6 +36,11 @@
 
 + (instancetype)sharedMqlClock;
 
+
+/**
+ show the now time;
+ */
+- (void)showMeTheTime;
 
 /**
  *  get The Weekday CN

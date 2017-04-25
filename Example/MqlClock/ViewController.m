@@ -28,8 +28,6 @@
 
     self.mc = [MqlClock sharedMqlClock];
     self.mc.delegate = self;
-    self.mc.dateFormat = @"yyyy-MM-dd HH:mm:ss";
-
 }
 
 

@@ -62,7 +62,9 @@ static MqlClock *instance = nil;
         NSString *dateString = [timeFormat stringFromDate:nowDate];
         NSString *weekDay = [self weekdayStringFromDate:nowDate];
         NSString *showStr = [NSString stringWithFormat:@"%@ %@",dateString,weekDay];
-        [self.delegate showTheTimeNow:showStr];
+        if ([self.delegate respondsToSelector:@selector(showTheTimeNow:)]) {
+            [self.delegate showTheTimeNow:showStr];
+        }
     }];
 }
 
@@ -101,22 +103,14 @@ static MqlClock *instance = nil;
     NSUInteger sec = _totalSecond - (nowSecond + 0.1);
 //    NSLog(@"=====%f======%lu",nowSecond,(unsigned long)sec);
     _cdTime = [NSString stringWithFormat:@"%lu",(unsigned long)sec];
-    [self.delegate countDown:_cdTime];
+    if ([self.delegate respondsToSelector:@selector(countDown:)]) {
+        [self.delegate countDown:_cdTime];
+    }
     if (sec <= 0) {
         [_countDownTimer invalidate];
     }
 }
 
-#pragma mark delegate
-- (void)countDown:(NSString *)cdTimer{
-
-}
-
-
-
-- (void)showTheTimeNow:(NSString *)nowTime{
-
-}
 
 
 
