@@ -48,7 +48,7 @@
 
 
 /**
- show the countDown
+ set the countDown start Second
  */
 - (void)setTheCountDownWithSecond:(NSUInteger)startSecond;
 @end
