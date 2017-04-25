@@ -10,4 +10,14 @@
 
 @interface CustomTableViewCell : UITableViewCell
 
+@property(nonatomic,strong) CADisplayLink *displayLink;
+
+@property(nonatomic,strong) UILabel *timeLable;
+
+@property(nonatomic,strong) UIButton *countDownBtn;
+
+@property(nonatomic,strong) NSDate *startDate;
+
+@property(nonatomic,assign) NSTimeInterval timeInterval;
+
 @end

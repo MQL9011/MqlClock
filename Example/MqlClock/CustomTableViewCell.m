@@ -12,15 +12,55 @@
 
 @implementation CustomTableViewCell
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    // Initialization code
+- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
+{
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    if (self) {
+        [self setUpUI];
+        self.mcCountDownTime = @"0.00";
+
+    }
+    return self;
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
+- (void)runCountDown{
+    [self runCADisplayLinkTimer];
 }
+
+- (void)showTheCountDownTime:(NSString *)time{
+    self.timeLable.text = time;
+}
+
+
+
+- (void)setUpUI{
+    [self.contentView addSubview:self.timeLable];
+    [self.contentView addSubview:self.countDownBtn];
+}
+
+- (UILabel *)timeLable{
+    if (_timeLable == nil) {
+        _timeLable = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 50)];
+        _timeLable.backgroundColor = [UIColor lightGrayColor];
+        _timeLable.textColor = [UIColor whiteColor];
+        [_timeLable setFont:[UIFont systemFontOfSize:25]];
+        _timeLable.text = @"0.00";
+    }
+    return _timeLable;
+}
+
+- (UIButton *)countDownBtn{
+    if (_countDownBtn == nil) {
+        _countDownBtn = [[UIButton alloc]initWithFrame:CGRectMake([UIScreen mainScreen].bounds.size.width/2 - 75, 50, 150, 50)];
+        _countDownBtn.backgroundColor = [UIColor orangeColor];
+        [_countDownBtn setTitle:@"点我开始倒计时" forState:UIControlStateNormal];
+        [_countDownBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [_countDownBtn addTarget:self action:@selector(runCountDown) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _countDownBtn;
+}
+
+
+
 
 @end

@@ -14,4 +14,7 @@
 
 @property(nonatomic,strong) NSString *mcCountDownTime;
 
+- (void)runCADisplayLinkTimer;
+
+- (void)showTheCountDownTime:(NSString *)time;
 @end
