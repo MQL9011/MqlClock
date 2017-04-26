@@ -17,7 +17,7 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         [self setUpUI];
-//        self.mcStartSecond = @"10.00";
+
     }
     return self;
 }
@@ -27,7 +27,6 @@
 - (void)runCountDown{
     [self runCADisplayLinkTimer];
 }
-
 
 
 /**
