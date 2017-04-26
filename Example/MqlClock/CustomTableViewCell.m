@@ -17,16 +17,24 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         [self setUpUI];
-        self.mcCountDownTime = @"0.00";
-
+//        self.mcStartSecond = @"10.00";
     }
     return self;
 }
+
+
 
 - (void)runCountDown{
     [self runCADisplayLinkTimer];
 }
 
+
+
+/**
+ 倒计时在这个方法中获得
+
+ @param time 当前倒计时
+ */
 - (void)showTheCountDownTime:(NSString *)time{
     self.timeLable.text = time;
 }

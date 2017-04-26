@@ -35,7 +35,7 @@
 
 - (void)onCADisplayLinkTimeout {
     double nowSecond = [[NSDate date] timeIntervalSinceDate:self.startDate];
-    double sec = 20 - (nowSecond + 0.1);
+    double sec = [self.mcStartSecond floatValue] - (nowSecond + 0.1);
     self.mcCountDownTime = [NSString stringWithFormat:@"%0.2f",sec];
     if (sec <= 0) {
         [self.displayLink invalidate];
@@ -47,11 +47,11 @@
 
 
 
-static const void *mcNowTimeKey = &mcNowTimeKey;
+static const void *mcStartSecondKey = &mcStartSecondKey;
 static const void *mcCountDownTimeKey = &mcCountDownTimeKey;
 
 
-@dynamic mcNowTime;
+@dynamic mcStartSecond;
 @dynamic mcCountDownTime;
 
 
@@ -59,12 +59,13 @@ static const void *mcCountDownTimeKey = &mcCountDownTimeKey;
 
 }
 
-- (NSString *)mcNowTime {
-    return objc_getAssociatedObject(self, mcNowTimeKey);
+- (NSString *)mcStartSecond {
+    return objc_getAssociatedObject(self, mcStartSecondKey);
 }
 
-- (void)setMcNowTime:(NSString *)mcNowTime{
-    objc_setAssociatedObject(self, mcNowTimeKey, mcNowTime, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+- (void)setMcStartSecond:(NSString *)mcStartSecond{
+    self.mcCountDownTime = @"0.00";
+    objc_setAssociatedObject(self, mcStartSecondKey, mcStartSecond, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (NSString *)mcCountDownTime {

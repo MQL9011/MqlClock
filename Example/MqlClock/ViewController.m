@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "MqlClock.h"
 #import "CustomTableViewCell.h"
+#import "UITableViewCell+MqlClock.h"
 
 @interface ViewController ()<MqlClockDelegate,UITableViewDelegate,UITableViewDataSource>
 
@@ -45,6 +46,10 @@
     [self.countDownBtn setTitle:[NSString stringWithFormat:@"倒计时%@",cdTimer] forState:UIControlStateNormal];
 }
 
+
+
+
+#pragma mark button event
 - (void)startCountDownTime{
     [self.mc setTheCountDownWithSecond:20];
 }
@@ -66,6 +71,7 @@
     }
     cell.textLabel.textColor = [UIColor lightGrayColor];
     cell.textLabel.font = [UIFont systemFontOfSize:14];
+    cell.mcStartSecond = [NSString stringWithFormat:@"%ld",(indexPath.row * 10 + 10)];
     return cell;
 }
 
