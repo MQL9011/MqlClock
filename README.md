@@ -1,6 +1,6 @@
 # MqlClock
 ![](https://img.shields.io/github/license/mashape/apistatus.svg)
-![](https://img.shields.io/badge/pod-v1.1.4-yellowgreen.svg)
+![](https://img.shields.io/badge/pod-v1.1.5-yellowgreen.svg)
 
 
 
@@ -28,7 +28,7 @@ The podfile
 platform :ios, '8.0'
 
 target 'TargetName' do
-pod 'MqlClock', '~> 1.1.4'
+pod 'MqlClock', '~> 1.1.5'
 end
 ```
 
