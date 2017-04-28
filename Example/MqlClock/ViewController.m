@@ -75,6 +75,11 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+
+}
+
 
 - (void)setUpUI{
     [self.view addSubview:self.timeLable];
