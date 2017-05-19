@@ -18,8 +18,7 @@
 
 
 
-
-![](http://o9rpnyegw.bkt.clouddn.com/LJDD.gif)
+![](http://o9rpnyegw.bkt.clouddn.com/DJS.png)
 
 ## Install
 The podfile   
