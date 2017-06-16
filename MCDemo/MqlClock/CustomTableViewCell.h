@@ -20,6 +20,8 @@
 
 @property(nonatomic,strong) UIButton *pauseBtn;
 
+@property(nonatomic,strong) UIButton *resetBtn;
+
 @property(nonatomic,strong) NSDate *startDate;
 
 @property(nonatomic,assign) NSTimeInterval timeInterval;

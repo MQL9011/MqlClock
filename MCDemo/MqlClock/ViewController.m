@@ -48,7 +48,6 @@
 
 
 
-
 #pragma mark button event
 - (void)startCountDownTime{
     [self.mc setTheCountDownWithSecond:20];
