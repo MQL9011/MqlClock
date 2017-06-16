@@ -16,6 +16,10 @@
 
 @property(nonatomic,strong) UIButton *countDownBtn;
 
+@property(nonatomic,strong) UIButton *startBtn;
+
+@property(nonatomic,strong) UIButton *pauseBtn;
+
 @property(nonatomic,strong) NSDate *startDate;
 
 @property(nonatomic,assign) NSTimeInterval timeInterval;
