@@ -14,7 +14,7 @@
 /**
  You can set the dataFormat default is yyyy-MM-dd HH:mm:ss
  */
-@property(nonatomic,copy) NSString *mcDateFormat;
+//@property(nonatomic,copy) NSString *mcDateFormat;
 
 /**
  set the start countDown second 10.00/15.50/20.00... s
@@ -39,8 +39,14 @@
  */
 - (void)showTheCountDownTime:(NSString *)time;
 
+
 /**
- show pause Time
+ pause the countDown time
  */
-- (void)ResetCountDownTime;
+- (BOOL)pauseCountDownTime;
+
+/**
+ reset the countDown Time
+ */
+- (void)resetCountDownTime;
 @end

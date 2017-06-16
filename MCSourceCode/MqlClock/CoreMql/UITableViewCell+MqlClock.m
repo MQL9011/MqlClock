@@ -20,6 +20,7 @@
 @property(nonatomic,assign) NSTimeInterval timeInterval;
 
 
+
 @end
 
 @implementation UITableViewCell (MqlClock)
@@ -47,7 +48,13 @@
 
 }
 
-- (void)ResetCountDownTime{
+- (BOOL)pauseCountDownTime{
+    self.displayLink.paused = !self.displayLink.paused;
+    return self.displayLink.paused;
+}
+
+
+- (void)resetCountDownTime{
     [self.displayLink invalidate];
     self.mcCountDownTime = @"0.00";
     [self showTheCountDownTime:self.mcCountDownTime];
@@ -58,7 +65,7 @@ static const void *mcDateFormatKey = &mcDateFormatKey;
 static const void *mcStartSecondKey = &mcStartSecondKey;
 static const void *mcCountDownTimeKey = &mcCountDownTimeKey;
 
-@dynamic mcDateFormat;
+//@dynamic mcDateFormat;
 @dynamic mcStartSecond;
 @dynamic mcCountDownTime;
 

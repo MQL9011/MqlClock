@@ -39,14 +39,26 @@
 }
 
 - (void)pauseBtnPressed{
-    [self ResetCountDownTime];
+   BOOL btnStatus =  [self pauseCountDownTime];
+    if (btnStatus) {
+        [self.pauseBtn setTitle:@"继续" forState:UIControlStateNormal];
+    }else{
+        [self.pauseBtn setTitle:@"暂停" forState:UIControlStateNormal];
+    }
+
 }
+
+- (void)resetBtnPressed{
+    [self resetCountDownTime];
+}
+
 
 
 - (void)setUpUI{
     [self.contentView addSubview:self.timeLable];
     [self.contentView addSubview:self.countDownBtn];
     [self.contentView addSubview:self.pauseBtn];
+    [self.contentView addSubview:self.resetBtn];
 }
 
 - (UILabel *)timeLable{
@@ -73,7 +85,7 @@
 
 - (UIButton *)pauseBtn{
     if (_pauseBtn == nil) {
-        _pauseBtn = [[UIButton alloc]initWithFrame:CGRectMake(200, 50, 100, 50)];
+        _pauseBtn = [[UIButton alloc]initWithFrame:CGRectMake(180, 50, 80, 50)];
         _pauseBtn.backgroundColor = [UIColor orangeColor];
         [_pauseBtn setTitle:@"暂停" forState:UIControlStateNormal];
         [_pauseBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
@@ -81,6 +93,18 @@
 
     }
     return _pauseBtn;
+}
+
+- (UIButton *)resetBtn{
+    if (_resetBtn == nil) {
+        _resetBtn = [[UIButton alloc]initWithFrame:CGRectMake(270, 50, 80, 50)];
+        _resetBtn.backgroundColor = [UIColor orangeColor];
+        [_resetBtn setTitle:@"重置" forState:UIControlStateNormal];
+        [_resetBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [_resetBtn addTarget:self action:@selector(resetBtnPressed) forControlEvents:UIControlEventTouchUpInside];
+
+    }
+    return _resetBtn;
 }
 
 
