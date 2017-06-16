@@ -7,23 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		102AA4551EAF3BA000351DC1 /* MqlClock.m in Sources */ = {isa = PBXBuildFile; fileRef = 102AA4521EAF3BA000351DC1 /* MqlClock.m */; };
-		102AA4561EAF3BA000351DC1 /* UITableViewCell+MqlClock.m in Sources */ = {isa = PBXBuildFile; fileRef = 102AA4541EAF3BA000351DC1 /* UITableViewCell+MqlClock.m */; };
 		102AA4591EAF3BBC00351DC1 /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 102AA4581EAF3BBC00351DC1 /* CustomTableViewCell.m */; };
+		1048D6FC1EF3BB430091F075 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 1048D6FB1EF3BB430091F075 /* Podfile */; };
 		10C87E1B1EA48A900088D5FA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 10C87E1A1EA48A900088D5FA /* main.m */; };
 		10C87E1E1EA48A900088D5FA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 10C87E1D1EA48A900088D5FA /* AppDelegate.m */; };
 		10C87E211EA48A900088D5FA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10C87E201EA48A900088D5FA /* ViewController.m */; };
 		10C87E261EA48A900088D5FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10C87E251EA48A900088D5FA /* Assets.xcassets */; };
 		10C87E291EA48A900088D5FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10C87E271EA48A900088D5FA /* LaunchScreen.storyboard */; };
+		D4D863788E57F924F25D3F15 /* Pods_MqlClock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D188D25D78B574AB69E3AAFE /* Pods_MqlClock.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		102AA4511EAF3BA000351DC1 /* MqlClock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MqlClock.h; sourceTree = "<group>"; };
-		102AA4521EAF3BA000351DC1 /* MqlClock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MqlClock.m; sourceTree = "<group>"; };
-		102AA4531EAF3BA000351DC1 /* UITableViewCell+MqlClock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+MqlClock.h"; sourceTree = "<group>"; };
-		102AA4541EAF3BA000351DC1 /* UITableViewCell+MqlClock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+MqlClock.m"; sourceTree = "<group>"; };
 		102AA4571EAF3BBC00351DC1 /* CustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableViewCell.h; sourceTree = "<group>"; };
 		102AA4581EAF3BBC00351DC1 /* CustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewCell.m; sourceTree = "<group>"; };
+		1048D6FB1EF3BB430091F075 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		10C87E161EA48A900088D5FA /* MqlClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MqlClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10C87E1A1EA48A900088D5FA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		10C87E1C1EA48A900088D5FA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -33,6 +30,9 @@
 		10C87E251EA48A900088D5FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		10C87E281EA48A900088D5FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		10C87E2A1EA48A900088D5FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E226F5C2FC912C662D9B728 /* Pods-MqlClock.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MqlClock.release.xcconfig"; path = "Pods/Target Support Files/Pods-MqlClock/Pods-MqlClock.release.xcconfig"; sourceTree = "<group>"; };
+		CBA92A9D708DE2F1AB94437D /* Pods-MqlClock.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MqlClock.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MqlClock/Pods-MqlClock.debug.xcconfig"; sourceTree = "<group>"; };
+		D188D25D78B574AB69E3AAFE /* Pods_MqlClock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MqlClock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,28 +40,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4D863788E57F924F25D3F15 /* Pods_MqlClock.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		102AA4501EAF3BA000351DC1 /* CoreMql */ = {
-			isa = PBXGroup;
-			children = (
-				102AA4511EAF3BA000351DC1 /* MqlClock.h */,
-				102AA4521EAF3BA000351DC1 /* MqlClock.m */,
-				102AA4531EAF3BA000351DC1 /* UITableViewCell+MqlClock.h */,
-				102AA4541EAF3BA000351DC1 /* UITableViewCell+MqlClock.m */,
-			);
-			path = CoreMql;
-			sourceTree = "<group>";
-		};
 		10C87E0D1EA48A900088D5FA = {
 			isa = PBXGroup;
 			children = (
+				1048D6FB1EF3BB430091F075 /* Podfile */,
 				10C87E181EA48A900088D5FA /* MqlClock */,
 				10C87E171EA48A900088D5FA /* Products */,
+				99A57ED2236F273C767E7EAB /* Pods */,
+				863AD6AA10A9830CAE9609F2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,7 +69,6 @@
 		10C87E181EA48A900088D5FA /* MqlClock */ = {
 			isa = PBXGroup;
 			children = (
-				102AA4501EAF3BA000351DC1 /* CoreMql */,
 				10C87E1C1EA48A900088D5FA /* AppDelegate.h */,
 				10C87E1D1EA48A900088D5FA /* AppDelegate.m */,
 				10C87E1F1EA48A900088D5FA /* ViewController.h */,
@@ -99,6 +91,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		863AD6AA10A9830CAE9609F2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D188D25D78B574AB69E3AAFE /* Pods_MqlClock.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		99A57ED2236F273C767E7EAB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CBA92A9D708DE2F1AB94437D /* Pods-MqlClock.debug.xcconfig */,
+				4E226F5C2FC912C662D9B728 /* Pods-MqlClock.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,9 +115,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 10C87E2D1EA48A900088D5FA /* Build configuration list for PBXNativeTarget "MqlClock" */;
 			buildPhases = (
+				B28757899AF3B48E8D9DCA19 /* [CP] Check Pods Manifest.lock */,
 				10C87E121EA48A900088D5FA /* Sources */,
 				10C87E131EA48A900088D5FA /* Frameworks */,
 				10C87E141EA48A900088D5FA /* Resources */,
+				0D31F4A7EDA40230F845DF2F /* [CP] Embed Pods Frameworks */,
+				E7A5D2153743EBC33F157598 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -158,6 +170,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1048D6FC1EF3BB430091F075 /* Podfile in Resources */,
 				10C87E291EA48A900088D5FA /* LaunchScreen.storyboard in Resources */,
 				10C87E261EA48A900088D5FA /* Assets.xcassets in Resources */,
 			);
@@ -165,17 +178,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0D31F4A7EDA40230F845DF2F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MqlClock/Pods-MqlClock-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B28757899AF3B48E8D9DCA19 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E7A5D2153743EBC33F157598 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MqlClock/Pods-MqlClock-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		10C87E121EA48A900088D5FA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				102AA4561EAF3BA000351DC1 /* UITableViewCell+MqlClock.m in Sources */,
 				10C87E211EA48A900088D5FA /* ViewController.m in Sources */,
 				102AA4591EAF3BBC00351DC1 /* CustomTableViewCell.m in Sources */,
 				10C87E1E1EA48A900088D5FA /* AppDelegate.m in Sources */,
 				10C87E1B1EA48A900088D5FA /* main.m in Sources */,
-				102AA4551EAF3BA000351DC1 /* MqlClock.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +344,7 @@
 		};
 		10C87E2E1EA48A900088D5FA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBA92A9D708DE2F1AB94437D /* Pods-MqlClock.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = S2M9W9G946;
@@ -298,6 +358,7 @@
 		};
 		10C87E2F1EA48A900088D5FA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E226F5C2FC912C662D9B728 /* Pods-MqlClock.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = S2M9W9G946;
