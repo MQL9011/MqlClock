@@ -2,5 +2,5 @@ platform :ios, '8.0'
 use_frameworks!
 
 target 'MqlClock' do
-pod 'MqlClock', '~> 1.2.0'
+pod 'MqlClock', '~> 1.2.1'
 end

@@ -1,6 +1,6 @@
 # MqlClock
 ![](https://img.shields.io/github/license/mashape/apistatus.svg)
-![](https://img.shields.io/badge/pod-v1.2.0-yellowgreen.svg)
+![](https://img.shields.io/badge/pod-v1.2.1-yellowgreen.svg)
 
 
 
