@@ -38,19 +38,19 @@
     self.timeLable.text = time;
 }
 
-- (void)pauseBtnPressed{
-   BOOL btnStatus =  [self pauseCountDownTime];
-    if (btnStatus) {
-        [self.pauseBtn setTitle:@"继续" forState:UIControlStateNormal];
-    }else{
-        [self.pauseBtn setTitle:@"暂停" forState:UIControlStateNormal];
-    }
-
-}
-
-- (void)resetBtnPressed{
-    [self resetCountDownTime];
-}
+//- (void)pauseBtnPressed{
+//   BOOL btnStatus =  [self pauseCountDownTime];
+//    if (btnStatus) {
+//        [self.pauseBtn setTitle:@"继续" forState:UIControlStateNormal];
+//    }else{
+//        [self.pauseBtn setTitle:@"暂停" forState:UIControlStateNormal];
+//    }
+//
+//}
+//
+//- (void)resetBtnPressed{
+//    [self resetCountDownTime];
+//}
 
 
 
