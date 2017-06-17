@@ -15,7 +15,10 @@
 
 @property(nonatomic,strong) NSDate *startDate;
 
+@property(nonatomic,strong) NSDate *pauseDate;
+
 @property(nonatomic,assign) NSTimeInterval timeInterval;
+
 
 
 @end
@@ -42,21 +45,41 @@
         self.mcCountDownTime = @"0.00";
     }
     [self showTheCountDownTime:self.mcCountDownTime];
+
+}
+
+- (BOOL)pauseCountDownTime{
+    self.displayLink.paused = !self.displayLink.paused;
+    return self.displayLink.paused;
 }
 
 
+- (void)resetCountDownTime{
+    [self.displayLink invalidate];
+    self.mcCountDownTime = @"0.00";
+    [self showTheCountDownTime:self.mcCountDownTime];
+}
 
 
+static const void *mcDateFormatKey = &mcDateFormatKey;
 static const void *mcStartSecondKey = &mcStartSecondKey;
 static const void *mcCountDownTimeKey = &mcCountDownTimeKey;
 
-
+//@dynamic mcDateFormat;
 @dynamic mcStartSecond;
 @dynamic mcCountDownTime;
 
 
 - (void)showTheCountDownTime:(NSString *)time{
 
+}
+
+- (NSString *)cellDateFormat{
+    return objc_getAssociatedObject(self, mcDateFormatKey);
+}
+
+- (void)setMcDateFormat:(NSString *)mcDateFormat{
+    objc_setAssociatedObject(self, mcDateFormatKey, mcDateFormat, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (NSString *)mcStartSecond {

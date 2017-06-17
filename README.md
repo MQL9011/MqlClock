@@ -1,6 +1,6 @@
 # MqlClock
 ![](https://img.shields.io/github/license/mashape/apistatus.svg)
-![](https://img.shields.io/badge/pod-v1.1.5-yellowgreen.svg)
+![](https://img.shields.io/badge/pod-v1.2.0-yellowgreen.svg)
 
 
 
@@ -15,7 +15,7 @@
 >基于runTime接口的倒计时  
 >支持UITableViewCell各自倒计时，支持滑动  
 >支持后台倒计时  
-
+>支持暂停重置
 
 
 ![](http://o9rpnyegw.bkt.clouddn.com/DJS.png)
