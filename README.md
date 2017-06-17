@@ -18,7 +18,7 @@
 >支持暂停重置
 
 
-![](http://o9rpnyegw.bkt.clouddn.com/DJS.png)
+![](http://o9rpnyegw.bkt.clouddn.com/MqlClock.png)
 
 ## Install
 The podfile   
