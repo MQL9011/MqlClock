@@ -27,7 +27,7 @@ The podfile
 platform :ios, '8.0'
 
 target 'TargetName' do
-pod 'MqlClock', '~> 1.1.5'
+pod 'MqlClock', '~> 1.2.1'
 end
 ```
 
