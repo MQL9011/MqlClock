@@ -8,6 +8,7 @@ BuildConfig.plist
 .DS_Store
 .AppleDouble
 .LSOverride
+.podspec
 
 # Icon must end with two \r
 Icon
