@@ -42,7 +42,7 @@
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
     if ([keyPath isEqualToString:@"nowSecondStr"]) {
 //        NSLog(@"%@",object);
-        self.timeLable.text = [NSString stringWithFormat:@"倒计时:%@",[change valueForKey:@"new"]];
+        self.timeLable.text = [NSString stringWithFormat:@"%@",[change valueForKey:@"new"]];
     }
 }
 
@@ -73,7 +73,8 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSString *reuseID = [NSString stringWithFormat:@"cell%lu%lu",(long)indexPath.row,(long)indexPath.section];
+//    NSString *reuseID = [NSString stringWithFormat:@"cell%lu%lu",(long)indexPath.row,(long)indexPath.section];
+    NSString *reuseID = @"cellID";
     CustomTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseID];
     if (cell == nil) {
         cell = [[CustomTableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:reuseID];

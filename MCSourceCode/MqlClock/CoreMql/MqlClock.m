@@ -72,14 +72,15 @@ static MqlClock *instance = nil;
 
 - (void)onCADisplayLinkTimeout {
     double nowSecond = [[NSDate date] timeIntervalSinceDate:self.startDate];
-//    double sec = [self.startSecondStr floatValue] - (nowSecond + 0.1);
-    double sec = nowSecond;
-    self.nowSecondStr = [NSString stringWithFormat:@"%0.2f",sec];
-//    if (sec <= 0) {
-//        [self.displayLink invalidate];
-//        self.totalSecondStr = @"0.00";
-//    }
-//    NSLog(@"%@",self.nowSecondStr);
+    //小数点后两位
+    int secDot =(int)((nowSecond - (int)(nowSecond))*100);
+    NSDateFormatter *timeFormat = [[NSDateFormatter alloc]init];
+    timeFormat.dateFormat = @"yyyy-MM-dd HH:mm:ss";
+    NSDate *nowDate = [NSDate date];
+    NSString *dateString = [timeFormat stringFromDate:nowDate];
+    self.nowSecondStr = [NSString stringWithFormat:@"%@:%d",dateString,secDot];
+//    NSLog(@"%@:%d",dateString,secDot);
+
 }
 
 
