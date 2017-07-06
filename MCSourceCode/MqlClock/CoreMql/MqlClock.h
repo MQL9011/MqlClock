@@ -6,11 +6,14 @@
 //  Copyright © 2017年 MQL. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @protocol MqlClockDelegate <NSObject>
 
 @optional
+
+
+
 /**
  show the countDown Time
  */
@@ -32,6 +35,10 @@
 @property(nonatomic,copy) NSString *dateFormat;
 
 
+/**
+ now time
+ */
+@property(nonatomic,strong) NSString *nowSecondStr;
 
 
 + (instancetype)sharedMqlClock;

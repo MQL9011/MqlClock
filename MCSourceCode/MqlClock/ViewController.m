@@ -31,11 +31,21 @@
     [self setUpUI];
 
     self.mc = [MqlClock sharedMqlClock];
+    [self.mc addObserver:self forKeyPath:@"nowSecondStr" options:NSKeyValueObservingOptionNew context:nil];
+
     self.mc.delegate = self;
 }
 
 
 #pragma mark MqlClockDelegate
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
+    if ([keyPath isEqualToString:@"nowSecondStr"]) {
+//        NSLog(@"%@",object);
+        self.timeLable.text = [NSString stringWithFormat:@"倒计时:%@",[change valueForKey:@"new"]];
+    }
+}
+
 
 - (void)showTheTimeNow:(NSString *)nowTime{
     self.timeLable.text = nowTime;

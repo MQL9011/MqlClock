@@ -8,15 +8,22 @@
 
 #import "MqlClock.h"
 
+
 @interface MqlClock ()
+
+@property(nonatomic,strong) CADisplayLink *displayLink;
 
 @property(nonatomic,copy) NSDate *startDate;
 
 @property(nonatomic,assign) NSUInteger totalSecond;
 
+@property(nonatomic,strong) NSString *startSecondStr;
+
 @property(nonatomic,copy) NSTimer *countDownTimer;
 
 @property(nonatomic,copy) NSString *cdTime;
+
+@property(nonatomic,assign) NSTimeInterval timeInterval;
 
 
 @end
@@ -44,10 +51,38 @@ static MqlClock *instance = nil;
 {
     self = [super init];
     if (self) {
-        [self showMeTheTime];
+//        [self showMeTheTime];
+        self.startSecondStr = @"1000";
+        [self showTheCADisplayLinkTime];
     }
     return self;
 }
+
+
+
+- (void)showTheCADisplayLinkTime{
+    CADisplayLink *displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(onCADisplayLinkTimeout)];
+    NSInteger frameInterval = floor(self.timeInterval * 1000 / (1000 / 60.0));
+    displayLink.preferredFramesPerSecond = frameInterval;
+    [displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
+    self.displayLink = displayLink;
+    self.startDate = [NSDate date];
+}
+
+
+- (void)onCADisplayLinkTimeout {
+    double nowSecond = [[NSDate date] timeIntervalSinceDate:self.startDate];
+//    double sec = [self.startSecondStr floatValue] - (nowSecond + 0.1);
+    double sec = nowSecond;
+    self.nowSecondStr = [NSString stringWithFormat:@"%0.2f",sec];
+//    if (sec <= 0) {
+//        [self.displayLink invalidate];
+//        self.totalSecondStr = @"0.00";
+//    }
+//    NSLog(@"%@",self.nowSecondStr);
+}
+
+
 
 
 - (void)showMeTheTime{
@@ -113,7 +148,9 @@ static MqlClock *instance = nil;
 
 
 
-
+- (void)dealloc{
+    [self removeObserver:self forKeyPath:@"nowSecondStr"];
+}
 
 
 
