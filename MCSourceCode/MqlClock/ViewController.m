@@ -32,7 +32,6 @@
 
     self.mc = [MqlClock sharedMqlClock];
     [self.mc addObserver:self forKeyPath:@"nowSecondStr" options:NSKeyValueObservingOptionNew context:nil];
-
     self.mc.delegate = self;
 }
 
@@ -78,6 +77,8 @@
     CustomTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseID];
     if (cell == nil) {
         cell = [[CustomTableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:reuseID];
+        [self.mc addObserver:cell forKeyPath:@"nowSecondStr" options:NSKeyValueObservingOptionNew context:nil];
+
     }
     cell.textLabel.textColor = [UIColor lightGrayColor];
     cell.textLabel.font = [UIFont systemFontOfSize:14];

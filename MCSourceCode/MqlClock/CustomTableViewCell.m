@@ -29,6 +29,14 @@
 }
 
 
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
+    if ([keyPath isEqualToString:@"nowSecondStr"]) {
+        //        NSLog(@"%@",object);
+        self.timeLable.text = [NSString stringWithFormat:@"%@",[change valueForKey:@"new"]];
+    }
+}
+
+
 /**
  倒计时在这个方法中获得
 
