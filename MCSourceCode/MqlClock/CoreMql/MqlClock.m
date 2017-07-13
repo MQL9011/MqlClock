@@ -138,6 +138,7 @@ static MqlClock *instance = nil;
     double nowSecond = [[NSDate date] timeIntervalSinceDate:_startDate];
     NSUInteger sec = _totalSecond - (nowSecond + 0.1);
 //    NSLog(@"=====%f======%lu",nowSecond,(unsigned long)sec);
+    
     _cdTime = [NSString stringWithFormat:@"%lu",(unsigned long)sec];
     if ([self.delegate respondsToSelector:@selector(countDown:)]) {
         [self.delegate countDown:_cdTime];
