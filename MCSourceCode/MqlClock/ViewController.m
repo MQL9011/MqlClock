@@ -31,20 +31,11 @@
     [self setUpUI];
 
     self.mc = [MqlClock sharedMqlClock];
-    [self.mc addObserver:self forKeyPath:@"nowSecondStr" options:NSKeyValueObservingOptionNew context:nil];
     self.mc.delegate = self;
 }
 
 
 #pragma mark MqlClockDelegate
-
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
-    if ([keyPath isEqualToString:@"nowSecondStr"]) {
-//        NSLog(@"%@",object);
-        self.timeLable.text = [NSString stringWithFormat:@"%@",[change valueForKey:@"new"]];
-    }
-}
-
 
 - (void)showTheTimeNow:(NSString *)nowTime{
     self.timeLable.text = nowTime;
@@ -72,13 +63,10 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-//    NSString *reuseID = [NSString stringWithFormat:@"cell%lu%lu",(long)indexPath.row,(long)indexPath.section];
-    NSString *reuseID = @"cellID";
+    NSString *reuseID = [NSString stringWithFormat:@"cell%lu%lu",(long)indexPath.row,(long)indexPath.section];
     CustomTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseID];
     if (cell == nil) {
         cell = [[CustomTableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:reuseID];
-        [self.mc addObserver:cell forKeyPath:@"nowSecondStr" options:NSKeyValueObservingOptionNew context:nil];
-
     }
     cell.textLabel.textColor = [UIColor lightGrayColor];
     cell.textLabel.font = [UIFont systemFontOfSize:14];

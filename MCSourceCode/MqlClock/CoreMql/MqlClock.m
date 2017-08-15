@@ -8,22 +8,15 @@
 
 #import "MqlClock.h"
 
-
 @interface MqlClock ()
-
-@property(nonatomic,strong) CADisplayLink *displayLink;
 
 @property(nonatomic,copy) NSDate *startDate;
 
 @property(nonatomic,assign) NSUInteger totalSecond;
 
-@property(nonatomic,strong) NSString *startSecondStr;
-
 @property(nonatomic,copy) NSTimer *countDownTimer;
 
 @property(nonatomic,copy) NSString *cdTime;
-
-@property(nonatomic,assign) NSTimeInterval timeInterval;
 
 
 @end
@@ -51,39 +44,10 @@ static MqlClock *instance = nil;
 {
     self = [super init];
     if (self) {
-//        [self showMeTheTime];
-        self.startSecondStr = @"1000";
-        [self showTheCADisplayLinkTime];
+        [self showMeTheTime];
     }
     return self;
 }
-
-
-
-- (void)showTheCADisplayLinkTime{
-    CADisplayLink *displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(onCADisplayLinkTimeout)];
-    NSInteger frameInterval = floor(self.timeInterval * 1000 / (1000 / 60.0));
-    displayLink.preferredFramesPerSecond = frameInterval;
-    [displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
-    self.displayLink = displayLink;
-    self.startDate = [NSDate date];
-}
-
-
-- (void)onCADisplayLinkTimeout {
-    double nowSecond = [[NSDate date] timeIntervalSinceDate:self.startDate];
-    //小数点后两位
-    int secDot =(int)((nowSecond - (int)(nowSecond))*100);
-    NSDateFormatter *timeFormat = [[NSDateFormatter alloc]init];
-    timeFormat.dateFormat = @"yyyy-MM-dd HH:mm:ss";
-    NSDate *nowDate = [NSDate date];
-    NSString *dateString = [timeFormat stringFromDate:nowDate];
-    self.nowSecondStr = [NSString stringWithFormat:@"%@:%d",dateString,secDot];
-//    NSLog(@"%@:%d",dateString,secDot);
-
-}
-
-
 
 
 - (void)showMeTheTime{
@@ -138,7 +102,6 @@ static MqlClock *instance = nil;
     double nowSecond = [[NSDate date] timeIntervalSinceDate:_startDate];
     NSUInteger sec = _totalSecond - (nowSecond + 0.1);
 //    NSLog(@"=====%f======%lu",nowSecond,(unsigned long)sec);
-    
     _cdTime = [NSString stringWithFormat:@"%lu",(unsigned long)sec];
     if ([self.delegate respondsToSelector:@selector(countDown:)]) {
         [self.delegate countDown:_cdTime];
@@ -150,9 +113,7 @@ static MqlClock *instance = nil;
 
 
 
-- (void)dealloc{
-    [self removeObserver:self forKeyPath:@"nowSecondStr"];
-}
+
 
 
 
