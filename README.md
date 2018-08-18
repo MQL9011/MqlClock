@@ -113,15 +113,5 @@ self.mc.dateFormat = @"yyyy/MM/dd HH:mm:ss";
 ```
 
 
-
-#更多咨询及用法
->加群二维码  
->群名称：iOS-MqlClock交流群  
->群   号：376686217 
-
-![](http://o9rpnyegw.bkt.clouddn.com/iOS-MqlClock%E4%BA%A4%E6%B5%81%E7%BE%A4%E7%BE%A4%E4%BA%8C%E7%BB%B4%E7%A0%81.png)
-
-#<a href="http://www.jianshu.com/p/e1ac30234de1">作者的详细使用说明请点击</a>
-
 # License
 MIT
