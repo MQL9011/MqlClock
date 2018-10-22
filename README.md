@@ -18,7 +18,7 @@
 >支持暂停重置
 
 
-![](http://o9rpnyegw.bkt.clouddn.com/MqlClock.png)
+![DJS.png](https://upload-images.jianshu.io/upload_images/1755091-c6037b176fe8b573.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/360)
 
 ## Install
 The podfile   
