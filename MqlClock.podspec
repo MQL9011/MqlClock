@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
                        DESC
 
   s.homepage         = 'https://github.com/MQL9011/MqlClock'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  s.screenshots     = 'https://upload-images.jianshu.io/upload_images/1755091-c3c362a3d04678d1.gif?imageMogr2/auto-orient/strip%7CimageView2/2/w/228/format/webp'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { '301063915@qq.com' => '301063915@qq.com' }
   s.source           = { :git => 'https://github.com/MQL9011/MqlClock.git', :tag => s.version.to_s }
@@ -25,12 +25,5 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'MqlClock/*.*'
-  
-  # s.resource_bundles = {
-  #   'MqlClock' => ['MqlClock/Assets/*.png']
-  # }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end
